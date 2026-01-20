@@ -242,7 +242,7 @@ app.get("/subscribers", async (req, res) => {
 // Every day at 8:00 AM
 //"0 8 * * *"
 //24 12 * * *"
-cron.schedule("42 12 * * *", async () => {
+cron.schedule("0 8 * * *", async () => {
   const emails = await emailCollection.find().toArray();
   const message =
     motivationalMessages[
